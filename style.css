@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #EEE7DA;
+}
+
+.container{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+margin-top: 20px;
+}
+.header h2{
+    color: #7360DF;
+}
+
+.resultField{
+    padding: 50px;
+}
+.resultImages{
+    display: flex;
+    height: 100px;
+   column-gap: 200px;
+}
+.resultImages img{
+    width: 90px;
+}
+.start .userResult{
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50% {
+        transform: rotate(10deg);
+    }
+    
+}
+.start .cpuResult{
+    animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+    50% {
+        transform: rotate(-10deg) rotateY(180deg);
+    }
+    
+}
+
+.start .optionImage{
+    pointer-events: none;
+}
+.userResult{
+    transform: rotate(90deg);
+}
+
+.cpuResult{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+.result{
+    margin-left: 120px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: purple;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 60px;
+}
+.optionImage{
+    opacity: 0.5;
+    transition:0.3s;
+}
+.optionImage:hover{
+    opacity: 1;
+}
+.optionImage.active{
+    opacity: 1;
+}
+.options img{
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+}
+.options h4{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+
+.scoreContainer{
+    display: flex;
+    column-gap: 100px;
+}
+.txtRes1{
+    color: red;
+    margin-top: 100px;
+}
+.txtRes2{
+    color: gray;
+    margin-top: 100px;
+}
+.reload{
+    margin-top: 20px;
+    width: 100px;
+    height: 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    background:#C499F3;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.reload:hover{
+    transform: scale(0.9);
+}
